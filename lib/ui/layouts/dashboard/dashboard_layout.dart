@@ -24,7 +24,7 @@ class _DashboardLayoutState extends State<DashboardLayout>
 
     SideMenuProvider.menuController = new AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
   }
 
