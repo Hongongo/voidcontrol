@@ -10,14 +10,13 @@ import 'package:admin_dashboard/router/router.dart';
 
 import 'package:admin_dashboard/providers/providers.dart';
 
-import 'package:admin_dashboard/services/local_storage.dart';
-import 'package:admin_dashboard/services/navigation_service.dart';
-import 'package:admin_dashboard/services/notifications_service.dart';
-
 import 'package:admin_dashboard/ui/layouts/auth/auth_layout.dart';
+
+import 'services/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await LocalStorage.configurePrefs();
   CafeApi.configureDio();
 
@@ -64,9 +63,12 @@ class MyApp extends StatelessWidget {
         }
       },
       theme: ThemeData.light().copyWith(
-          scrollbarTheme: ScrollbarThemeData().copyWith(
-              thumbColor:
-                  WidgetStateProperty.all(Colors.grey.withOpacity(0.5)))),
+        scrollbarTheme: ScrollbarThemeData().copyWith(
+          thumbColor: WidgetStateProperty.all(
+            Colors.grey.withOpacity(0.5),
+          ),
+        ),
+      ),
     );
   }
 }
