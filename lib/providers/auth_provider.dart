@@ -25,6 +25,7 @@ class AuthProvider extends ChangeNotifier {
       final authResponse = AuthResponse.fromMap(json);
       this.user = authResponse.usuario;
 
+      // this._token = 'skldafma lsdmfalsdfmalsdfasdf'; // dummy token
       authStatus = AuthStatus.authenticated;
       LocalStorage.prefs.setString('token', authResponse.token);
       NavigationService.replaceTo(Flurorouter.dashboardRoute);
