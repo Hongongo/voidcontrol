@@ -6,6 +6,6 @@
 ## add variables for asset routes for easier refactor
 ## change color theme (auth, side bar and menus)
 ## add animations (sidebar in dashboard)
-## 
+## add buuf icons to icons view
 ## 
 ## 
