@@ -262,6 +262,7 @@ class _AvatarContainer extends StatelessWidget {
                         onPressed: () async {
                           
                           FilePickerResult? result = await FilePicker.platform.pickFiles(
+                            type: FileType.custom,
                             allowedExtensions: ['jpg','jpeg','png'],
                             allowMultiple: false
                           );
